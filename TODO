@@ -1,0 +1,12 @@
+#1: Create a simulator object
+#   (Create event scheduler)
+            
+            set ns[new Simulator]
+
+#2: Open the trace files
+
+            set tf[open out.tr w]
+            $ns trace-all $tf
+
+    #Open the animation files
+            set nf[open out.nam]
