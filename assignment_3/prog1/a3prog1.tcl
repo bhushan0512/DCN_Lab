@@ -5,7 +5,7 @@ set tf [open out.tr w]
 $ns trace-all $tf
 
 $ns color 1 red
-$ns color 2 green
+$ns color 2 brown
 
 proc finish {} {
 global ns nf tf
@@ -27,7 +27,7 @@ set n7 [$ns node]
 set n8 [$ns node]
 set n9 [$ns node]
 
-$ns make-lan "$n0 $n1 $n2 $n3 $n4 $n5 $n6 $n7 $n8 $n9" 0.1Mb 0.1ms LL Queue/DropTail Mac/802_3
+$ns make-lan "$n0 $n1 $n2 $n3 $n4 $n5 $n6 $n7 $n8 $n9"  0.1Mb 0.1ms LL Queue/DropTail Mac/802_3
 
 set tcp0 [new Agent/TCP]
 $ns attach-agent $n3 $tcp0
@@ -59,3 +59,4 @@ $ns at 2.0 "$telnet1 stop"
 
 $ns at 5.0 "finish"
 $ns run
+
