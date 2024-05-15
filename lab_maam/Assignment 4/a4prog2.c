@@ -119,7 +119,7 @@ void main()
     if (pattern_length >= msg_length)
     {
         printf("Pattern size should be less than Message. Please re-enter the Pattern \n");
-        return 0;
+        return ;
     }
 
     printf("Given Message is  : %s\n", message);
